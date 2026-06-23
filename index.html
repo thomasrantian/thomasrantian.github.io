@@ -1,540 +1,639 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-  <title>Ran (Thomas) Tian</title>
-
-  <meta name="author" content="Thomas Tian">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="icon" href="images/favicon.ico">
+  <title>Ran (Thomas) Tian — Robotics & AI Researcher</title>
 
+  <meta name="author" content="Ran (Thomas) Tian">
+  <meta name="description"
+    content="Ran (Thomas) Tian (田然) is a PhD candidate at UC Berkeley working on safe alignment between embodied agents and humans, across the lifecycle of robot foundation models. ICRA 2024 Best Paper (RT-X), RSS Pioneer, Qualcomm Innovation Fellow.">
+  <meta name="keywords"
+    content="Ran Tian, 田然, UC Berkeley, robotics, AI, foundation models, autonomous driving, vision-language-action, alignment, safety, NVIDIA, Waymo">
+  <link rel="canonical" href="https://thomasrantian.github.io/">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ran (Thomas) Tian — Robotics & AI Researcher">
+  <meta property="og:description"
+    content="PhD candidate at UC Berkeley. Safe alignment between embodied agents and humans. ICRA 2024 Best Paper (RT-X), RSS Pioneer, Qualcomm Innovation Fellow.">
+  <meta property="og:url" content="https://thomasrantian.github.io/">
+  <meta property="og:image" content="https://thomasrantian.github.io/images/personal-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ran (Thomas) Tian — Robotics & AI Researcher">
+  <meta name="twitter:description"
+    content="PhD candidate at UC Berkeley. Safe alignment between embodied agents and humans.">
+  <meta name="twitter:image" content="https://thomasrantian.github.io/images/personal-image.jpg">
+  <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e131c" media="(prefers-color-scheme: dark)">
+
+  <!-- Monogram favicon (no external file needed) -->
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d3c70'/%3E%3Ctext%20x='50%25'%20y='53%25'%20font-family='Georgia,serif'%20font-size='30'%20font-weight='700'%20fill='%23ffffff'%20text-anchor='middle'%20dominant-baseline='central'%3ERT%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700&display=swap">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+  <!-- Set theme before first paint to avoid a flash -->
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js'); /* gates reveal-animations so no-JS users still see content */
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) { t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+        d.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Structured data for richer search results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ran (Thomas) Tian",
+    "alternateName": "田然",
+    "url": "https://thomasrantian.github.io/",
+    "image": "https://thomasrantian.github.io/images/personal-image.jpg",
+    "jobTitle": "PhD Candidate",
+    "affiliation": { "@type": "Organization", "name": "UC Berkeley" },
+    "sameAs": [
+      "https://scholar.google.com/citations?user=uY4D8-wAAAAJ&hl=en",
+      "https://twitter.com/tianran_"
+    ]
+  }
+  </script>
 </head>
 
-<div class="header"
-  style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;padding-bottom:0px">
-  <!-- <a href="index.html" class="logo" style="color:black;font-size:18px;">Andrea Bajcsy</a> -->
-  <!-- <a href="index.html" class="logo" style="color:black;font-size:18px; padding-top:30px"><img src="images/intent_logo.png" height="80"></a> -->
-  <div class="header-left" style="padding-left:1.0%;">
-    <a href="index.html" style="text-align:left;font-size: 25px;padding-top:50px;color:black">Ran (Thomas) Tian - 田然</a>
-  </div>
-  <!-- <div class="header-right" style="padding-top:50px;">
-    <a href="" style="font-size: 18px; color:black;">Blogs</a>
-    <a href="" style="font-size: 18px; color:black">Full
-      Publications</a>
-  </div> -->
-</div>
+<body id="top">
 
-<body>
+  <a class="skip-link" href="#about">Skip to content</a>
 
-  <table
-    style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#top">
+        Ran <span>(Thomas)</span> Tian <span class="nav__zh">田然</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#awards">Awards</a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch theme">
+          <i class="fa fa-moon-o" aria-hidden="true"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
 
-    <tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
+  <main>
 
-          <!-- Intro -->
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <!-- <hr> -->
-              <tr style="padding:0px;text-align:left">
-                <td style="padding-left:2.5%;padding-right:2.5%;padding-top:2.5%;width:63%;vertical-align:middle">
-                  <!-- <p style="text-align:left">
-                    <name>Ran (Thomas) Tian - 田然</name>
-                    <br>
-                    rantian [at] berkeley [dot] edu
-                  </p> -->
-                  <p>
-                    I am a PhD student at <a href="https://bair.berkeley.edu//">UC Berkeley</a>
-                    advised by <a href="https://msc.berkeley.edu/">Prof. Masayoshi Tomizuka</a>
-                    and <a href="https://cmu-intentlab.github.io/">Prof. Andrea Bajcsy</a> at Carnegie Mellon
-                    University.
-                  </p>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero reveal">
+      <div class="hero__text">
+        <p class="hero__eyebrow">PhD Candidate · UC Berkeley</p>
+        <h1 class="hero__name">Ran <span class="nowrap">(Thomas)</span> Tian <span class="hero__zh">田然</span></h1>
+        <p class="hero__tagline">
+          Toward <em>safe alignment</em> between embodied agents and humans &mdash; across the entire
+          lifecycle of robot foundation models.
+        </p>
+        <p class="hero__affil">
+          Robotics &times; AI &nbsp;·&nbsp; UC Berkeley
+          <a href="https://bair.berkeley.edu/">BAIR</a> &nbsp;·&nbsp;
+          <a href="https://research.nvidia.com/labs/avg/">NVIDIA Research</a> &nbsp;·&nbsp;
+          <a href="https://waymo.com/research/">Waymo</a>
+        </p>
+        <div class="hero__links">
+          <a class="chip" href="https://scholar.google.com/citations?user=uY4D8-wAAAAJ&hl=en&authuser=1">
+            <i class="fa fa-graduation-cap" aria-hidden="true"></i> Google Scholar
+          </a>
+          <a class="chip" href="https://twitter.com/tianran_" aria-label="X (formerly Twitter)">
+            <i class="fa fa-twitter" aria-hidden="true"></i> X
+          </a>
+          <a class="chip" href="mailto:rantian@berkeley.edu">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i> Email
+          </a>
+        </div>
+      </div>
+      <figure class="hero__photo">
+        <a href="images/personal-image.jpg">
+          <img src="images/personal-image.jpg" alt="Ran (Thomas) Tian, PhD candidate in robotics at UC Berkeley" loading="eager" width="600" height="600">
+        </a>
+      </figure>
+    </section>
 
-                  <p>
-                    My research lies in the intersection of robotics and AI with a focus on
-                    safe alignment between embodied agents and humans.
-                    I tackle the alignment and safety problems that emerge throughout the
-                    life-cycle of foundation models in robotics, ranging from: training (wherein we need to collect
-                    and quantify what kinds of embodied data will enable the desired robotics capabilities), to
-                    fine-tuning (wherein we must align these models with humans), to deployment (where these models
-                    must run in real-time, reliably detect out-of-distribution scenarios, and confidently hand over
-                    control to fallback-strategies).
-                    I ground my work through a variety of applications, from autonomous cars, to personalized robots, to
-                    generative AI and in experiments with real human participants.
-                  </p>
+    <!-- ===================== RECOGNITION BAND ===================== -->
+    <section class="band reveal" aria-label="Selected honors">
+      <a class="band__item" href="https://robotics-transformer-x.github.io/">
+        <span class="band__label">ICRA 2024</span>
+        <span class="band__value"><i class="fa fa-trophy" aria-hidden="true"></i> Best Paper &mdash; RT-X</span>
+      </a>
+      <a class="band__item" href="https://sites.google.com/view/rsspioneers2024/">
+        <span class="band__label">RSS 2024</span>
+        <span class="band__value"><i class="fa fa-star" aria-hidden="true"></i> Pioneer</span>
+      </a>
+      <a class="band__item" href="https://openreview.net/forum?id=8UFG9D8xeU">
+        <span class="band__label">ICLR 2025</span>
+        <span class="band__value"><i class="fa fa-star" aria-hidden="true"></i> Spotlight · Top 5%</span>
+      </a>
+      <a class="band__item"
+        href="https://www.qualcomm.com/research/university-relations/innovation-fellowship/2024-north-america">
+        <span class="band__label">Qualcomm 2024</span>
+        <span class="band__value"><i class="fa fa-star" aria-hidden="true"></i> Innovation Fellow</span>
+      </a>
+      <span class="band__item band__item--static">
+        <span class="band__label">Forbes 2025</span>
+        <span class="band__value"><i class="fa fa-star" aria-hidden="true"></i> 30 Under 30 · nom.</span>
+      </span>
+      <a class="band__item" href="https://www.thegaiaa.org/en/awards_mrzx#mrzx">
+        <span class="band__label">WAIC 2024</span>
+        <span class="band__value"><i class="fa fa-star" aria-hidden="true"></i> Yunfan Rising Star</span>
+      </a>
+    </section>
 
-                  <p>
-                    During my PhD study, I also spent a significant amount of time at <a
-                      href="https://waymo.com/research/">Waymo</a>, scaling my research outcomes in driving foundation
-                    models, including pre-training, post-training preference alignment, and distillation for onboard
-                    deployment.
-                    I am fortunate to have the opportunity to work at <a
-                      href="https://research.nvidia.com/labs/avg/">NVIDIA Research</a>, focusing on
-                    vision-language-action models for autonomous driving.
-                    <!-- I spent Summer 2023 at <a href="https://waymo.com/research/">Waymo</a> 
-                working on large autoregressive model for autonomous vehicle motion generation and efficient deployment.
-                I also spent Summer 2022 at <a href="https://waymo.com/research/">Waymo</a> 
-                working on learning autonomous vehicle behavior scoring function from human feedback. -->
-                    Previously, I was a research intern at <a href="https://www.weride.ai/WeRide">WeRide</a>,
-                    <a href="https://usa.honda-ri.com/">Honda Research Institute</a>, and <a
-                      href="https://www.qualcomm.com/research/artificial-intelligence/ai-research">Qualcomm AI
-                      Research</a>.
-                  </p>
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="section reveal" tabindex="-1">
+      <h2 class="section__title">About</h2>
+      <div class="prose">
+        <p>
+          I am a PhD candidate at <a href="https://bair.berkeley.edu/">UC Berkeley</a>,
+          advised by <a href="https://msc.berkeley.edu/">Prof. Masayoshi Tomizuka</a>
+          and <a href="https://cmu-intentlab.github.io/">Prof. Andrea Bajcsy</a> at Carnegie Mellon University.
+        </p>
+        <p>
+          My research lies at the intersection of robotics and AI, with a focus on
+          <strong>safe alignment between embodied agents and humans</strong>.
+          I tackle the alignment and safety problems that emerge throughout the life-cycle of foundation models
+          in robotics: from <em>training</em> (collecting and quantifying what kinds of embodied data will enable
+          the desired robotics capabilities), to <em>fine-tuning</em> (aligning these models with humans), to
+          <em>deployment</em> (where these models must run in real-time, reliably detect out-of-distribution
+          scenarios, and confidently hand over control to fallback strategies).
+          I ground my work through a variety of applications &mdash; from autonomous cars, to personalized robots,
+          to generative AI &mdash; and in experiments with real human participants.
+        </p>
+        <p>
+          During my PhD, I also spent a significant amount of time at
+          <a href="https://waymo.com/research/">Waymo</a>, scaling my research outcomes in driving foundation
+          models, including pre-training, post-training preference alignment, and distillation for onboard
+          deployment. I am fortunate to work at
+          <a href="https://research.nvidia.com/labs/avg/">NVIDIA Research</a>, focusing on
+          vision-language-action models for autonomous driving. Previously, I was a research intern at
+          <a href="https://www.weride.ai/WeRide">WeRide</a>,
+          <a href="https://usa.honda-ri.com/">Honda Research Institute</a>, and
+          <a href="https://www.qualcomm.com/research/artificial-intelligence/ai-research">Qualcomm AI Research</a>.
+        </p>
+      </div>
+    </section>
 
-                  <!-- <p>
-                    I sincerely appreciate the fellowship support from <a href="https://www.weride.ai/WeRide">WeRide</a>
-                    (thank you! Dr. Yan Li, Dr. Hua Zhong, and Dr. Tony Han)
-                    for funding my research in my first two years of study!
-                  </p> -->
+    <!-- ===================== NEWS ===================== -->
+    <section id="news" class="section reveal">
+      <h2 class="section__title">News</h2>
+      <ul class="feed">
+        <li class="feed__item">
+          <span class="feed__date">May 2025</span>
+          <span class="feed__body">
+            Our paper <a href="https://yilin-wu98.github.io/forewarn/">FOREWARN</a> won
+            <span class="tag tag--award">Best Paper Award</span> at the
+            <a href="https://sites.google.com/view/worldmodel-iclr2025/">ICLR Workshop on World Models:
+              Understanding, Modelling, and Scaling</a>.
+          </span>
+        </li>
+        <li class="feed__item">
+          <span class="feed__date">Feb 2025</span>
+          <span class="feed__body">
+            Our paper with Waymo on
+            <a href="https://openreview.net/forum?id=8UFG9D8xeU">efficient post-training preference alignment for
+              motion generation</a> is accepted by ICLR as a
+            <span class="tag tag--award">Spotlight · notable top 5%</span>.
+          </span>
+        </li>
+        <li class="feed__item">
+          <span class="feed__date">Jan 2025</span>
+          <span class="feed__body">
+            I am co-organizing the
+            <a href="https://sites.google.com/stanford.edu/safe-vlm-icra/home">Safely Leveraging VLMs in Robotics
+              Workshop</a> at ICRA, with colleagues from CMU, Stanford, NVIDIA, DeepMind, Waymo, Anthropic, and
+            MIT &mdash; check out our program!
+          </span>
+        </li>
+        <li class="feed__item">
+          <span class="feed__date">Jan 2025</span>
+          <span class="feed__body">
+            I am co-organizing the
+            <a href="https://sites.google.com/stanford.edu/safe-vlm-icra/home">RSS Pioneers Workshop</a> at RSS
+            this year!
+          </span>
+        </li>
+        <li class="feed__item">
+          <span class="feed__date">Jan 2025</span>
+          <span class="feed__body">
+            Ever watch your imitation-based robot policy do something bizarre, and wish you could fix it &mdash; no
+            retraining needed? Meet <a href="https://arxiv.org/abs/2502.01828">FOREWARN</a>, a VLM-in-the-loop
+            system that steers multi-modal generative policies toward the right outcomes, on the fly.
+          </span>
+        </li>
+        <li class="feed__item">
+          <span class="feed__date">Jan 2025</span>
+          <span class="feed__body">
+            Not happy with your pre-trained robotics foundation model? Check out
+            <a href="https://arxiv.org/pdf/2412.04835">Maximizing Alignment with Minimal Feedback</a> to learn how
+            we bring the success of preference alignment &mdash; popularized in non-embodied foundation models
+            (e.g., LLMs) &mdash; to robotics foundation models.
+          </span>
+        </li>
+      </ul>
+    </section>
 
-                  <!-- <p style="display:inline;color:#f18800;">I am actively looking for an industrial RS or a postdoctoral
-                    position! Please reach out to me if you think I might be a good fit!</p> -->
+    <!-- ===================== PUBLICATIONS ===================== -->
+    <section id="publications" class="section reveal">
+      <h2 class="section__title">Selected Publications</h2>
+      <p class="section__note">
+        For the most up-to-date list, please see my
+        <a href="https://scholar.google.com/citations?user=uY4D8-wAAAAJ&hl=en&authuser=1">Google Scholar</a>.
+      </p>
 
-                  <p style="text-align:left">
-                    <!-- <a href="mailto:minae@cs.stanford.edu"><b>email</b></a> &nbsp&nbsp|&nbsp&nbsp -->
-                    <!--<a href="minae_cv.pdf"><b>cv</b></a> &nbsp&nbsp|&nbsp&nbsp-->
-                    <a href="https://scholar.google.com/citations?user=uY4D8-wAAAAJ&hl=en&authuser=1"><b>google
-                        scholar</b></a> &nbsp&nbsp|&nbsp&nbsp
-                    <a href="https://twitter.com/tianran_"><b>X</b></a> &nbsp&nbsp
-                  </p>
-                </td>
-                <td style="padding:0%;width:15%;max-width:40%">
-                  <a href="images/personal-image.jpg"><img style="width:100%;max-width:100%;border-radius:15%"
-                      alt="profile photo" src="images/personal-image.jpg" class="hoverZoomLink"></a>
-                </td>
-              </tr>
-            </tbody>
+      <div class="pubs">
 
-          </table>
+        <article class="pub">
+          <a class="pub__media" href="https://arxiv.org/abs/2503.20105">
+            <img src="paper_imgs/efficient_post_training_demo-ezgif.com-crop.gif"
+              alt="Direct post-training preference alignment for motion generation" loading="lazy">
+          </a>
+          <div class="pub__body">
+            <a class="pub__title" href="https://arxiv.org/abs/2503.20105">
+              Direct Post-Training Preference Alignment for Multi-Agent Motion Generation Models Using Implicit
+              Feedback from Pre-training Demonstrations
+            </a>
+            <p class="pub__authors"><strong>Ran Tian</strong>, Kratarth Goel</p>
+            <p class="pub__venue">
+              International Conference on Learning Representations (ICLR), 2025
+              <span class="tag tag--award">Spotlight</span>
+            </p>
+            <div class="pub__links">
+              <a class="btn btn--paper" href="https://arxiv.org/abs/2503.20105"><i class="fa fa-file-text-o"
+                  aria-hidden="true"></i> Paper</a>
+              <a class="btn btn--site"
+                href="https://sites.google.com/berkeley.edu/efficient-preference-alignment/home"><i
+                  class="fa fa-external-link" aria-hidden="true"></i> Website</a>
+            </div>
+          </div>
+        </article>
 
+        <article class="pub">
+          <a class="pub__media" href="https://arxiv.org/abs/2412.04835">
+            <img src="paper_imgs/tian_ijrr_2025.gif"
+              alt="Maximizing alignment with minimal human feedback" loading="lazy">
+          </a>
+          <div class="pub__body">
+            <a class="pub__title" href="https://arxiv.org/abs/2412.04835">
+              Maximizing Alignment with Minimal Human Feedback: Efficient Visuomotor Robot Policy Preference
+              Alignment
+            </a>
+            <p class="pub__authors">
+              <strong>Ran Tian</strong>, Yilin Wu, Chenfeng Xu, Masayoshi Tomizuka, Jitendra Malik, Andrea Bajcsy
+            </p>
+            <p class="pub__venue"><em>arXiv</em>, 2024</p>
+            <div class="pub__links">
+              <a class="btn btn--paper" href="https://arxiv.org/abs/2412.04835"><i class="fa fa-file-text-o"
+                  aria-hidden="true"></i> Paper</a>
+              <a class="btn btn--site" href="https://sites.google.com/berkeley.edu/rapl"><i
+                  class="fa fa-external-link" aria-hidden="true"></i> Website</a>
+            </div>
+          </div>
+        </article>
 
-          <!-- Awards -->
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding-left:2.5%;padding-bottom:20px;width:100%;vertical-align:middle">
-                  <heading><b>Awards</b></heading>
-                  <p>
-                  <ul class="fa-ul">
-                    <li><i class="fa fa-chevron-right"></i>
-                      <p style="display:inline;color:#f18800;">[Feb 2025]</p> I was named a <a
-                        href="https://robotics.umd.edu/futureleaders" style="color: red;"> Microsoft Future Leaders in
-                        Robotics and AI </a>!
-                    </li>
-                    <li><i class="fa fa-chevron-right"></i>
-                      <p style="display:inline;color:#f18800;">[Jan 2025]</p> I got <a style="color: red;"> Forbes 30
-                        Under 30 </a> (Asia, tech) nomination!
-                    </li>
-                    <li><i class="fa fa-chevron-right"></i>
-                      <p style="display:inline;color:#f18800;">[Jun 2024]</p> I was named a <a style="color: red;">
-                        Rising Star </a> and won the
-                      <a href=" https://www.thegaiaa.org/en/awards_mrzx#mrzx" style="color: red;"> Yunfan Award at the
-                        World Artificial
-                        Intelligence Conference </a> this year (top 15 early career Chinese AI researchers)!
-                    </li>
-                    <li><i class="fa fa-chevron-right"></i>
-                      <p style="display:inline;color:#f18800;">[May 2024]</p> I was named a <a
-                        href=" https://sites.google.com/view/rsspioneers2024/" style="color: red;"> Robotics: Science
-                        and Systems
-                        Pioneer</a> this year (top 30 early career researchers around the world in the robotics field)!
-                    </li>
-                    <li><i class="fa fa-chevron-right"></i>
-                      <p style="display:inline;color:#f18800;">[Apr 2024]</p> I won the <a
-                        href=" https://www.qualcomm.com/research/university-relations/innovation-fellowship/2024-north-america"
-                        style="color: red;">
-                        2024 Qualcomm Innovation Fellowship </a> (32 winners in North America)!
-                    </li>
-                    <li><i class="fa fa-chevron-right"></i>
-                      <p style="display:inline;color:#f18800;">[Mar 2024]</p> I won the finalist award in the <a
-                        href="http://scholarship.baidu.com/" style="color: red;"> Baidu AI Fellowship </a> this year
-                      (top 20 Phd students in
-                      the AI field around the world)!
-                    </li>
-                    <li><i class="fa fa-chevron-right"></i>
-                      <p style="display:inline;color:#f18800;">[Mar 2024]</p> Our work <a
-                        href=" https://robotics-transformer-x.github.io/"> RT-X</a> won the <a style="color: red;">2024
-                        ICRA Best
-                        Paper, Best Student Paper, and Best Manipulation Paper</a>!
-                    </li>
+        <article class="pub">
+          <a class="pub__media" href="https://arxiv.org/abs/2502.01828">
+            <img src="paper_imgs/wu_2024_forewarn.gif"
+              alt="From foresight to forethought: VLM-in-the-loop policy steering" loading="lazy">
+          </a>
+          <div class="pub__body">
+            <a class="pub__title" href="https://arxiv.org/abs/2502.01828">
+              From Foresight to Forethought: VLM-In-the-Loop Policy Steering via Latent Alignment
+            </a>
+            <p class="pub__authors">Yilin Wu, <strong>Ran Tian</strong>, Gokul Swamy, Andrea Bajcsy</p>
+            <p class="pub__venue">
+              Robotics: Science and Systems (RSS), 2025 &nbsp;·&nbsp; ICLR Workshop on World Models, 2025
+              <span class="tag tag--award">Best Paper Award</span>
+            </p>
+            <div class="pub__links">
+              <a class="btn btn--paper" href="https://arxiv.org/abs/2502.01828"><i class="fa fa-file-text-o"
+                  aria-hidden="true"></i> Paper</a>
+              <a class="btn btn--site" href="https://yilin-wu98.github.io/forewarn/"><i class="fa fa-external-link"
+                  aria-hidden="true"></i> Website</a>
+            </div>
+          </div>
+        </article>
 
+        <article class="pub">
+          <a class="pub__media" href="https://arxiv.org/abs/2310.07932">
+            <img src="paper_imgs/tian_rapl_23.png"
+              alt="Visual representation alignment for robot learning" loading="lazy">
+          </a>
+          <div class="pub__body">
+            <a class="pub__title" href="https://arxiv.org/abs/2310.07932">
+              What Matters to You? Towards Visual Representation Alignment for Robot Learning
+            </a>
+            <p class="pub__authors">
+              <strong>Ran Tian</strong>, Chenfeng Xu, Masayoshi Tomizuka, Jitendra Malik, Andrea Bajcsy
+            </p>
+            <p class="pub__venue">International Conference on Learning Representations (ICLR), 2024</p>
+            <div class="pub__links">
+              <a class="btn btn--paper" href="https://arxiv.org/abs/2310.07932"><i class="fa fa-file-text-o"
+                  aria-hidden="true"></i> Paper</a>
+            </div>
+          </div>
+        </article>
 
-                  </ul>
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <article class="pub">
+          <a class="pub__media" href="https://robotics-transformer-x.github.io/">
+            <img src="paper_imgs/RT-X-vis.gif" alt="Open X-Embodiment and RT-X models" loading="lazy">
+          </a>
+          <div class="pub__body">
+            <a class="pub__title" href="https://robotics-transformer-x.github.io/paper.pdf">
+              Open X-Embodiment: Robotic Learning Datasets and RT-X Models
+            </a>
+            <p class="pub__authors">Open X-Embodiment Collaboration, <strong>Ran Tian</strong>, et al.</p>
+            <p class="pub__venue">
+              International Conference on Robotics and Automation (ICRA), 2024
+              <span class="tag tag--award">Best Paper Award</span>
+            </p>
+            <div class="pub__links">
+              <a class="btn btn--paper" href="https://robotics-transformer-x.github.io/paper.pdf"><i
+                  class="fa fa-file-text-o" aria-hidden="true"></i> Paper</a>
+              <a class="btn btn--site" href="https://robotics-transformer-x.github.io/"><i class="fa fa-rss"
+                  aria-hidden="true"></i> Website</a>
+            </div>
+          </div>
+        </article>
 
+        <article class="pub">
+          <a class="pub__media" href="https://arxiv.org/abs/2407.00959">
+            <img src="paper_imgs/TOKEN_front_fig.png"
+              alt="Tokenize the world into object-level knowledge for autonomous driving" loading="lazy">
+          </a>
+          <div class="pub__body">
+            <a class="pub__title" href="https://arxiv.org/abs/2407.00959">
+              Tokenize the World into Object-level Knowledge to Address Long-tail Events in Autonomous Driving
+            </a>
+            <p class="pub__authors">
+              <strong>Ran Tian</strong>, Boyi Li, Xinshuo Weng, Yuxiao Chen, Edward Schmerling, Yue Wang, Boris
+              Ivanovic, Marco Pavone
+            </p>
+            <p class="pub__venue">Conference on Robot Learning (CoRL), 2024</p>
+            <div class="pub__links">
+              <a class="btn btn--paper" href="https://arxiv.org/abs/2407.00959"><i class="fa fa-file-text-o"
+                  aria-hidden="true"></i> Paper</a>
+              <a class="btn btn--site" href="https://thomasrantian.github.io/TOKEN_MM-LLM_for_AutoDriving/"><i
+                  class="fa fa-rss" aria-hidden="true"></i> Website</a>
+            </div>
+          </div>
+        </article>
 
-          <!-- news feed -->
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding-left:2.5%;padding-bottom:20px;width:100%;vertical-align:middle">
-                  <heading><b>News</b></heading>
-                  <p>
-                  <ul class="fa-ul">
+        <article class="pub">
+          <a class="pub__media" href="https://sites.google.com/view/human-oriented-robot-learning">
+            <img src="paper_imgs/huo_human_2023.gif"
+              alt="Human-oriented representation learning for robotic manipulation" loading="lazy">
+          </a>
+          <div class="pub__body">
+            <a class="pub__title" href="https://sites.google.com/view/human-oriented-robot-learning">
+              Human-oriented Representation Learning for Robotic Manipulation
+            </a>
+            <p class="pub__authors">
+              Mingxiao Huo, Mingyu Ding, Chenfeng Xu, <strong>Ran Tian</strong>, Xinghao Zhu, Yao Mu, Lingfeng Sun,
+              Masayoshi Tomizuka, Wei Zhan
+            </p>
+            <p class="pub__venue">Robotics: Science and Systems (RSS), 2024</p>
+            <div class="pub__links">
+              <a class="btn btn--paper" href="https://arxiv.org/pdf/2310.03023.pdf"><i class="fa fa-file-text-o"
+                  aria-hidden="true"></i> Paper</a>
+              <a class="btn btn--site" href="https://sites.google.com/view/human-oriented-robot-learning"><i
+                  class="fa fa-rss" aria-hidden="true"></i> Website</a>
+            </div>
+          </div>
+        </article>
 
-                    <li><img src="images/new_animated.gif" \="">
-                      <p style="display:inline;color:#f18800;">[May 2025]</p> Our paper <a
-                        href=" https://sites.google.com/stanford.edu/safe-vlm-icra/home"> FOREWARN </a> won <p
-                        style="display:inline;color:red;">
-                        the best paper award </p> at the
-                      <a href=" https://sites.google.com/view/worldmodel-iclr2025/"> ICLR workshop World Models:
-                        Understanding, Modelling, and Scaling</a>!
-                    </li>
+        <article class="pub">
+          <a class="pub__media" href="https://arxiv.org/pdf/2301.00901.pdf">
+            <img src="paper_imgs/HRI_23.png" alt="Modeling and influencing the dynamics of human learning"
+              loading="lazy">
+          </a>
+          <div class="pub__body">
+            <a class="pub__title" href="https://arxiv.org/pdf/2301.00901.pdf">
+              Towards Modeling and Influencing the Dynamics of Human Learning
+            </a>
+            <p class="pub__authors"><strong>Ran Tian</strong>, Masayoshi Tomizuka, Anca Dragan, Andrea Bajcsy</p>
+            <p class="pub__venue">International Conference on Human-Robot Interaction (HRI), 2023</p>
+            <div class="pub__links">
+              <a class="btn btn--paper" href="https://arxiv.org/pdf/2301.00901.pdf"><i class="fa fa-file-text-o"
+                  aria-hidden="true"></i> Paper</a>
+              <a class="btn btn--talk" href="https://www.youtube.com/watch?v=KGsVm0qXDAc&t=3s"><i
+                  class="fa fa-volume-up" aria-hidden="true"></i> Talk</a>
+            </div>
+          </div>
+        </article>
 
-                    <li><img src="images/new_animated.gif" \="">
-                      <p style="display:inline;color:#f18800;">[Feb 2025]</p> Our paper with Waymo on <a
-                        href="https://openreview.net/forum?id=8UFG9D8xeU"> efficient post-training preference alignment
-                        for motion generation</a> is accepted by ICLR as a <p style="display:inline;color:red;">
-                        spotlight (notable top 5%) </p>.
-                    </li>
-                    <li><img src="images/new_animated.gif" \="">
-                      <p style="display:inline;color:#f18800;">[Jan 2025]</p> I am co-organizing the <a
-                        href=" https://sites.google.com/stanford.edu/safe-vlm-icra/home"> Safely Leveraging VLMs in
-                        Robotics Workshop </a>
-                      at ICRA with colleagues from CMU, Stanford, NVIDIA, Deepmind, Waymo, Anthropic, and MIT! Check out
-                      our exciting program!
-                    </li>
-                    <li><img src="images/new_animated.gif" \="">
-                      <p style="display:inline;color:#f18800;">[Jan 2025]</p> I am co-organizing the <a
-                        href=" https://sites.google.com/stanford.edu/safe-vlm-icra/home"> RSS Pioneers Workshop </a>
-                      at RSS this year!
-                    </li>
-                    <li> <img src="images/new_animated.gif" \="">
-                      <p style="display:inline;color:#f18800;">[Jan 2025] </p>Ever watch your imitation-based robot
-                      policy do
-                      something bizarre? Wish you could fix it—no retraining needed? Meet <a
-                        href="https://arxiv.org/abs/2502.01828"> FOREWARN</a>, a VLM-in-the-loop system
-                      that steers multi-modal generative policies toward the right outcomes, on the fly!
-                    </li>
-                    <li> <img src="images/new_animated.gif" \="">
-                      <p style="display:inline;color:#f18800;">[Jan 2025] </p>Not happy with your pre-trained robotics
-                      foundation model?
-                      Check out our paper <a href="https://arxiv.org/pdf/2412.04835"> Maximizing Alignment with Minimal
-                        Feedback</a> to learn how we bring the success of preference alignment—popularized in
-                      non-embodied foundation models (e.g., LLMs)—to robotics foundation models!
-                    </li>
-                    <!-- <li><i class="fa fa-chevron-right"></i>
-                      <p style="display:inline;color:#f18800;">[Sep 2024]</p> Three papers accepted by CoRL! One on
-                      using VLM to handle long-tail events in autonomous driving,
-                      one on system-level failure detection for motion prediction model refinement,
-                      and one on MoE policies for robot manipulation.
-                    </li>
-                    <li><i class="fa fa-chevron-right"></i>
-                      <p style="display:inline;color:#f18800;">[Mar 2024]</p> Check out our new <a
-                        href="https://arxiv.org/abs/2403.04745 ">preprint</a> on a general calibrated regret metric for
-                      detecting and mitigating <b>system-level human-robot interaction failures</b> and how it can be
-                      used to identify informative deployment data for efficiently improving behavior prediction models.
-                    </li>
-                    <li><i class="fa fa-chevron-right"></i>
-                      <p style="display:inline;color:#f18800;">[Jan 2024]</p> Our work on visual representation
-                      alignment for robot learning was accepted to ICLR 2024! We propose a tractable video-only method
-                      for solving the visual representation alignment problem and learning visual robot rewards. Check
-                      out the new results in the <a href="https://arxiv.org/pdf/2310.07932.pdf">arXiv version</a>.
-                    </li> -->
+        <article class="pub">
+          <a class="pub__media" href="https://arxiv.org/abs/2109.14700">
+            <img src="paper_imgs/tian_2022.gif"
+              alt="Safety assurances for human-robot interaction via confidence-aware game-theoretic models"
+              loading="lazy">
+          </a>
+          <div class="pub__body">
+            <a class="pub__title" href="https://arxiv.org/abs/2109.14700">
+              Safety Assurances for Human-Robot Interaction via Confidence-aware Game-theoretic Human Models
+            </a>
+            <p class="pub__authors">
+              <strong>Ran Tian</strong>, Liting Sun, Andrea Bajcsy, Masayoshi Tomizuka, Anca Dragan
+            </p>
+            <p class="pub__venue">International Conference on Robotics and Automation (ICRA), 2022</p>
+            <div class="pub__links">
+              <a class="btn btn--paper" href="https://arxiv.org/abs/2109.14700"><i class="fa fa-file-text-o"
+                  aria-hidden="true"></i> Paper</a>
+              <a class="btn btn--talk"
+                href="https://www.youtube.com/watch?v=YZlwMxepGtc&list=PLjbUVJgrbvfnyEXcYwEsTTLnsHu9_cuJa&index=6"><i
+                  class="fa fa-volume-up" aria-hidden="true"></i> Talk</a>
+            </div>
+          </div>
+        </article>
 
-                  </ul>
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+      </div>
+    </section>
 
-          <!-- papers -->
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding-left:20px;padding-bottom:0px;width:100%;vertical-align:middle">
-                  <heading><b>Representative Publications</b></heading>
+    <!-- ===================== AWARDS ===================== -->
+    <section id="awards" class="section reveal">
+      <h2 class="section__title">Honors &amp; Awards</h2>
+      <ul class="feed feed--awards">
+        <li class="feed__item">
+          <span class="feed__date">Feb 2025</span>
+          <span class="feed__body">
+            Named a <a href="https://robotics.umd.edu/futureleaders">Microsoft Future Leader in Robotics and
+              AI</a>.
+          </span>
+        </li>
+        <li class="feed__item">
+          <span class="feed__date">Jan 2025</span>
+          <span class="feed__body">
+            <strong>Forbes 30 Under 30</strong> (Asia, Technology) nomination.
+          </span>
+        </li>
+        <li class="feed__item">
+          <span class="feed__date">Jun 2024</span>
+          <span class="feed__body">
+            Named a Rising Star and won the
+            <a href="https://www.thegaiaa.org/en/awards_mrzx#mrzx">Yunfan Award at the World Artificial
+              Intelligence Conference</a> &mdash; top 15 early-career Chinese AI researchers.
+          </span>
+        </li>
+        <li class="feed__item">
+          <span class="feed__date">May 2024</span>
+          <span class="feed__body">
+            Named a <a href="https://sites.google.com/view/rsspioneers2024/">Robotics: Science and Systems
+              Pioneer</a> &mdash; top 30 early-career robotics researchers worldwide.
+          </span>
+        </li>
+        <li class="feed__item">
+          <span class="feed__date">Apr 2024</span>
+          <span class="feed__body">
+            Won the
+            <a href="https://www.qualcomm.com/research/university-relations/innovation-fellowship/2024-north-america">2024
+              Qualcomm Innovation Fellowship</a> &mdash; 32 winners in North America.
+          </span>
+        </li>
+        <li class="feed__item">
+          <span class="feed__date">Mar 2024</span>
+          <span class="feed__body">
+            Finalist for the <a href="http://scholarship.baidu.com/">Baidu AI Fellowship</a> &mdash; top 20 PhD
+            students in AI worldwide.
+          </span>
+        </li>
+        <li class="feed__item">
+          <span class="feed__date">Mar 2024</span>
+          <span class="feed__body">
+            Our work <a href="https://robotics-transformer-x.github.io/">RT-X</a> won the
+            <span class="tag tag--award">2024 ICRA Best Paper, Best Student Paper &amp; Best Manipulation
+              Paper</span>.
+          </span>
+        </li>
+      </ul>
+    </section>
 
-                  <p>For the most up-to-date list of publications, please see <a
-                      href="https://scholar.google.com/citations?user=uY4D8-wAAAAJ&hl=en&authuser=1">google scholar</a>.
-                    <br>
-                    <!-- <p><i>* indicates equal contribution and co-authorship.</i></p> -->
-                </td>
-              </tr>
-            </tbody>
+  </main>
 
-          </table>
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__links">
+        <a href="https://scholar.google.com/citations?user=uY4D8-wAAAAJ&hl=en&authuser=1">Google Scholar</a>
+        <a href="https://twitter.com/tianran_">X</a>
+        <a href="mailto:rantian@berkeley.edu">Email</a>
+      </div>
+      <p class="footer__credit">
+        &copy; Ran (Thomas) Tian. Design adapted from
+        <a href="https://people.eecs.berkeley.edu/~abajcsy/">Andrea Bajcsy</a>.
+      </p>
+    </div>
+  </footer>
 
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top" aria-hidden="true">
+    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+  </button>
 
-          <br>
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-            <tbody>
-              <td style="padding-left:20px;padding-bottom:20px;width:15%;vertical-align:middle">
-                <img src="paper_imgs/efficient_post_training_demo-ezgif.com-crop.gif"
-                  style="border-radius:5%/10%;width:200px">
-              </td>
-              <td style="padding-left:35px;padding-bottom:20px;width:100%;vertical-align:left">
-                <a href="https://arxiv.org/abs/2503.20105">
-                  <papertitle>Direct Post-Training Preference Alignment for Multi-Agent Motion Generation Model Using
-                    Implicit Feedback from Pre-training Demonstrations
-                  </papertitle>
-                </a>
-                <br>
-                <b>Ran Tian</b>, Kratarth Goel
-                <br>
-                <em>International Conference on Learning Representations (ICLR), 2025,
-                  <span class="highlight">
-                    <p style="display:inline;color:#f9400d;font-weight: bold;">
-                      Spotlight paper</p>
-                  </span></em>
-                <br>
-                <br>
-                <a class="button-paper" href="https://arxiv.org/abs/2503.20105"><i class="fa fa-file-text"
-                    aria-hidden="true"></i> paper</a>
-                &nbsp
-                <a class="button-website"
-                  href="https://sites.google.com/berkeley.edu/efficient-preference-alignment/home"><i
-                    class="fa fa-external-link"></i> website</a>
-                <p></p>
-              </td>
-            </tbody>
+      /* ---- Skip link: move focus to content for keyboard users ---- */
+      var skip = document.querySelector('.skip-link');
+      if (skip) {
+        skip.addEventListener('click', function () {
+          var about = document.getElementById('about');
+          if (about) about.focus();
+        });
+      }
 
-            <tbody>
-              <td style="padding-left:20px;padding-bottom:20px;width:15%;vertical-align:middle">
-                <img src="paper_imgs/tian_ijrr_2025.gif" style="border-radius:5%/10%;width:200px">
-              </td>
-              <td style="padding-left:35px;padding-bottom:20px;width:100%;vertical-align:left">
-                <a href="https://arxiv.org/abs/2412.04835">
-                  <papertitle>Maximizing Alignment with Minimal Human Feedback: Efficient Visuomotor Robot Policy
-                    Preference
-                    Alignment
-                  </papertitle>
-                </a>
-                <br>
-                <b>Ran Tian</b>, Yilin Wu, Chenfeng Xu, Masayoshi Tomizuka, Jitendra Malik, Andrea Bajcsy
-                <br>
-                <em>arXiv</em>, 2024
-                <br>
-                <br>
-                <a class="button-paper" href="https://arxiv.org/abs/2412.04835"><i class="fa fa-file-text"
-                    aria-hidden="true"></i>
-                  paper</a>
-                &nbsp
-                <a class="button-website" href="https://sites.google.com/berkeley.edu/rapl"><i
-                    class="fa fa-external-link"></i>
-                  website</a>
-                <p></p>
-              </td>
-            </tbody>
+      /* ---- Theme toggle ---- */
+      var toggle = document.getElementById('themeToggle');
+      function syncToggleIcon() {
+        var dark = root.getAttribute('data-theme') === 'dark';
+        var icon = toggle.querySelector('i');
+        icon.className = dark ? 'fa fa-sun-o' : 'fa fa-moon-o';
+        var label = dark ? 'Switch to light mode' : 'Switch to dark mode';
+        toggle.setAttribute('aria-pressed', dark ? 'true' : 'false');
+        toggle.setAttribute('aria-label', label);
+        toggle.setAttribute('title', label);
+      }
+      syncToggleIcon();
+      toggle.addEventListener('click', function () {
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        syncToggleIcon();
+      });
 
-            <tbody>
+      /* ---- Reveal on scroll ---- */
+      var revealables = document.querySelectorAll('.reveal');
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        revealables.forEach(function (el) { el.classList.add('is-visible'); });
+      } else {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+        revealables.forEach(function (el) { io.observe(el); });
+      }
 
-              <td style="padding-left:20px;padding-bottom:20px;width:15%;vertical-align:middle">
-                <img src="paper_imgs/wu_2024_forewarn.gif" style="border-radius:5%/10%;width:200px">
-              </td>
-              <td style="padding-left:35px;padding-bottom:20px;width:100%;vertical-align:left">
-                <a href="https://arxiv.org/abs/2502.01828">
-                  <papertitle>From Foresight to Forethought: VLM-In-the-Loop Policy Steering via Latent Alignment
-                  </papertitle>
-                </a>
-                <br>
-                Yilin Wu, <b>Ran Tian</b>, Gouku Swamy, Andrea Bajcsy
-                <br>
-                <em>Robotics: Science and Systems, 2025</em> &
-                <em>ICLR Workshop on World Models, 2025,
-                  <span class="highlight">
-                    <p style="display:inline;color:#f9400d;font-weight: bold;">
-                      Best paper award.</p>
-                  </span></em>
-                <br>
-                <br>
-                <a class="button-paper" href="https://arxiv.org/abs/2502.01828"><i class="fa fa-file-text"
-                    aria-hidden="true"></i> paper</a>
-                &nbsp
-                <a class="button-website" href="https://yilin-wu98.github.io/forewarn/"><i
-                    class="fa fa-external-link"></i>
-                  website</a>
-                <p></p>
-              </td>
-            </tbody>
+      /* ---- Nav: shadow on scroll + back-to-top ---- */
+      var nav = document.getElementById('nav');
+      var toTop = document.getElementById('toTop');
+      function onScroll() {
+        var y = window.scrollY || window.pageYOffset;
+        nav.classList.toggle('is-scrolled', y > 8);
+        var showTop = y > 600;
+        toTop.classList.toggle('is-visible', showTop);
+        toTop.setAttribute('aria-hidden', String(!showTop));
+      }
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+      toTop.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+      });
 
-            <tbody>
-              <td style="padding-left:20px;padding-bottom:20px;width:15%;vertical-align:middle"><img
-                  src="paper_imgs/tian_rapl_23.png" style="border-radius:5%/10%;width:200px"></td>
-              <td style="padding-left:35px;padding-bottom:20px;width:100%;vertical-align:left">
-                <a href="https://arxiv.org/abs/2310.07932">
-                  <papertitle>What Matters to You? Towards Visual Representation Alignment for Robot Learning
-                  </papertitle>
-                </a>
-                <br>
-                <b>Ran Tian</b>, Chenfeng Xu, Masayoshi Tomizuka, Jitendra Malik, Andrea Bajcsy
-                <br>
-                <em>International Conference on Learning Representations (ICLR), 2024</em>
-                <br>
-                <br>
-                <a class="button-paper" href="https://arxiv.org/abs/2310.07932"><i class="fa fa-file-text"
-                    aria-hidden="true"></i> paper</a>
-                &nbsp
-              </td>
-            </tbody>
-
-            <tbody>
-              <td style="padding-left:20px;padding-bottom:20px;width:15%;vertical-align:middle"><img
-                  src="paper_imgs/RT-X-vis.gif" style="border-radius:5%/10%;width:200px"></td>
-              <td style="padding-left:35px;padding-bottom:20px;width:100%;vertical-align:left">
-                <a href="https://robotics-transformer-x.github.io/paper.pdf">
-                  <papertitle>Open X-Embodiment: Robotic Learning Datasets and RT-X Models</papertitle>
-                </a>
-                <br>
-                Google, <b>Ran Tian</b>, et al.
-                <br>
-                <em>International Conference on Robotics and Automation (ICRA), 2024, <span class="highlight">
-                    <p style="display:inline;color:#f9400d;font-weight: bold;">
-                      Best paper award</p>
-                  </span></em>
-                <br>
-                <br>
-                <a class="button-paper" href="https://robotics-transformer-x.github.io/paper.pdf"><i
-                    class="fa fa-file-text" aria-hidden="true"></i> paper</a>
-                &nbsp
-                <a class="button-website" href="https://robotics-transformer-x.github.io/"><i class="fa fa-rss"
-                    aria-hidden="true"></i> website</a>
-                <p></p>
-              </td>
-            </tbody>
-
-          </table>
-
-
-
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-
-            <tbody>
-
-              <td style="padding-left:20px;padding-bottom:20px;width:15%;vertical-align:middle"><img
-                  src="paper_imgs/TOKEN_front_fig.png" style="border-radius:5%/10%;width:200px"></td>
-              <td style="padding-left:35px;padding-bottom:20px;width:100%;vertical-align:left">
-                <a href="https://arxiv.org/abs/2407.00959">
-                  <papertitle>Tokenize the World into Object-level Knowledge to Address Long-tail Events in Autonomous
-                    Driving</papertitle>
-                </a>
-                <br>
-                <b>Ran Tian</b>, Boyi Li, Xinshuo Weng, Yuxiao Chen, Edward Schmerling, Yue Wang, Boris Ivanovic, Marco
-                Pavone
-                <br>
-                <em>Conference on Robot Learning (CoRL), 2024</em>
-                <br>
-                <a class="button-paper" href="https://arxiv.org/abs/2407.00959"><i class="fa fa-file-text"
-                    aria-hidden="true"></i> paper</a>
-                &nbsp
-                <a class="button-website" href="https://thomasrantian.github.io/TOKEN_MM-LLM_for_AutoDriving/"><i
-                    class="fa fa-rss" aria-hidden="true"></i> website</a>
-              </td>
-            </tbody>
-
-            <tbody>
-
-              <td style="padding-left:20px;padding-bottom:20px;width:15%;vertical-align:middle"><img
-                  src="paper_imgs/huo_human_2023.gif" style="border-radius:5%/10%;width:200px"></td>
-              <td style="padding-left:35px;padding-bottom:20px;width:100%;vertical-align:left">
-                <a href="https://sites.google.com/view/human-oriented-robot-learning">
-                  <papertitle>Human-oriented Representation Learning for Robotic Manipulation</papertitle>
-                </a>
-                <br>
-                Mingxiao Huo, Mingyu Ding, Chenfeng Xu, <b>Ran Tian</b>, Xinghao Zhu, Yao Mu Lingfeng Sun, Masayoshi
-                Tomizuka,
-                Wei Zhan
-                <br>
-                <em> Robotics: Science and Systems, 2024</em>
-                <br>
-                <br>
-                <a class="button-paper" href="https://arxiv.org/pdf/2310.03023.pdf"><i class="fa fa-file-text"
-                    aria-hidden="true"></i> paper</a>
-                &nbsp
-                <a class="button-website" href="https://sites.google.com/view/human-oriented-robot-learning"><i
-                    class="fa fa-rss" aria-hidden="true"></i> website</a>
-                <p></p>
-              </td>
-            </tbody>
-
-            <tbody>
-              <td style="padding-left:20px;padding-bottom:20px;width:15%;vertical-align:middle"><img
-                  src="paper_imgs/HRI_23.png" style="border-radius:5%/10%;width:200px"></td>
-              <td style="padding-left:35px;padding-bottom:20px;width:100%;vertical-align:left">
-                <a href="https://arxiv.org/pdf/2301.00901.pdf">
-                  <papertitle>Towards Modeling and Influencing the Dynamics of Human Learning</papertitle>
-                </a>
-                <br>
-                <b>Ran Tian</b>, Masayoshi Tomizuka, Anca Dragan, Andrea Bajcsy
-                <br>
-                <em>International Conference on Human-Robot Interaction (HRI), 2023
-                </em>
-                <br>
-                <br>
-                <a class="button-paper" href="https://arxiv.org/pdf/2301.00901.pdf"><i class="fa fa-file-text"
-                    aria-hidden="true"></i> paper</a>
-                &nbsp
-                <a class="button-talk" href="https://www.youtube.com/watch?v=KGsVm0qXDAc&t=3s"><i
-                    class="fa fa-volume-up" aria-hidden="true"></i> talk</a>
-                <p></p>
-              </td>
-
-            </tbody>
-
-            <tbody>
-              <td style="padding-left:20px;padding-bottom:20px;width:15%;vertical-align:middle"><img
-                  src="paper_imgs/tian_2022.gif" style="border-radius:5%/10%;width:200px"></td>
-              <td style="padding-left:35px;padding-bottom:20px;width:100%;vertical-align:left">
-                <a href="https://arxiv.org/abs/2109.14700">
-                  <papertitle>Safety Assurances for Human-Robot Interaction via Confidence-aware Game-theoretic Human
-                    Models
-                  </papertitle>
-                </a>
-                <br>
-                <b>Ran Tian</b>, Liting Sun, Andrea Bajcsy, Masayoshi Tomizuka, Anca Dragan
-                <br>
-                <em>International Conference on Robotics and Automation (ICRA), 2022</em>
-                <br>
-                <br>
-                <a class="button-paper" href="https://arxiv.org/abs/2109.14700"><i class="fa fa-file-text"
-                    aria-hidden="true"></i> paper</a>
-                &nbsp
-                <a class="button-talk"
-                  href="https://www.youtube.com/watch?v=YZlwMxepGtc&list=PLjbUVJgrbvfnyEXcYwEsTTLnsHu9_cuJa&index=6"><i
-                    class="fa fa-volume-up" aria-hidden="true"></i> talk</a>
-                <p></p>
-              </td>
-            </tbody>
-
-          </table>
-
-          <hr>
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" style="padding-top:0px;">
-            <tbody>
-              <tr>
-                <td>
-                  <br>
-                  <p align="center" style="font-size:small;color:grey;">
-                    website adapted from <a href="https://people.eecs.berkeley.edu/~abajcsy/"
-                      style="font-size:small;">here</a>
-                    </font>
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-        </td>
-      </tr>
-    </tbody>
-  </table>
+      /* ---- Scroll-spy: highlight active nav link ---- */
+      var sections = ['about', 'news', 'publications', 'awards']
+        .map(function (id) { return document.getElementById(id); })
+        .filter(Boolean);
+      var navLinks = {};
+      document.querySelectorAll('.nav__links a').forEach(function (a) {
+        navLinks[a.getAttribute('href').slice(1)] = a;
+      });
+      if ('IntersectionObserver' in window) {
+        var spy = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            var link = navLinks[entry.target.id];
+            if (link) link.classList.toggle('is-active', entry.isIntersecting);
+          });
+        }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+        sections.forEach(function (s) { spy.observe(s); });
+      }
+    })();
+  </script>
 
 </body>
 
