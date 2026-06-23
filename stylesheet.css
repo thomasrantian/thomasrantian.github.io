@@ -420,8 +420,8 @@ main { display: block; }
 }
 .feed__body strong { color: var(--text); }
 
-/* News: lone item reads as a deliberate "Latest" card */
-.feed--news { max-width: 72ch; }
+/* News: items read as deliberate "Latest" cards */
+.feed--news { max-width: 72ch; display: flex; flex-direction: column; gap: 14px; }
 .feed--news .feed__item {
   border: 1px solid var(--border);
   border-left: 3px solid var(--accent);
