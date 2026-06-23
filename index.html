@@ -88,8 +88,8 @@
       <nav class="nav__links" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#news">News</a>
-        <a href="#publications">Publications</a>
         <a href="#awards">Awards</a>
+        <a href="#publications">Publications</a>
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch theme">
           <i class="fa fa-moon-o" aria-hidden="true"></i>
         </button>
@@ -250,6 +250,64 @@
             <a href="https://arxiv.org/pdf/2412.04835">Maximizing Alignment with Minimal Feedback</a> to learn how
             we bring the success of preference alignment &mdash; popularized in non-embodied foundation models
             (e.g., LLMs) &mdash; to robotics foundation models.
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===================== AWARDS ===================== -->
+    <section id="awards" class="section reveal">
+      <h2 class="section__title">Honors &amp; Awards</h2>
+      <ul class="feed feed--awards">
+        <li class="feed__item">
+          <span class="feed__date">Feb 2025</span>
+          <span class="feed__body">
+            Named a <a href="https://robotics.umd.edu/futureleaders">Microsoft Future Leader in Robotics and
+              AI</a>.
+          </span>
+        </li>
+        <li class="feed__item">
+          <span class="feed__date">Jan 2025</span>
+          <span class="feed__body">
+            <strong>Forbes 30 Under 30</strong> (Asia, Technology) nomination.
+          </span>
+        </li>
+        <li class="feed__item">
+          <span class="feed__date">Jun 2024</span>
+          <span class="feed__body">
+            Named a Rising Star and won the
+            <a href="https://www.thegaiaa.org/en/awards_mrzx#mrzx">Yunfan Award at the World Artificial
+              Intelligence Conference</a> &mdash; top 15 early-career Chinese AI researchers.
+          </span>
+        </li>
+        <li class="feed__item">
+          <span class="feed__date">May 2024</span>
+          <span class="feed__body">
+            Named a <a href="https://sites.google.com/view/rsspioneers2024/">Robotics: Science and Systems
+              Pioneer</a> &mdash; top 30 early-career robotics researchers worldwide.
+          </span>
+        </li>
+        <li class="feed__item">
+          <span class="feed__date">Apr 2024</span>
+          <span class="feed__body">
+            Won the
+            <a href="https://www.qualcomm.com/research/university-relations/innovation-fellowship/2024-north-america">2024
+              Qualcomm Innovation Fellowship</a> &mdash; 32 winners in North America.
+          </span>
+        </li>
+        <li class="feed__item">
+          <span class="feed__date">Mar 2024</span>
+          <span class="feed__body">
+            Finalist for the <a href="http://scholarship.baidu.com/">Baidu AI Fellowship</a> &mdash; top 20 PhD
+            students in AI worldwide.
+          </span>
+        </li>
+        <li class="feed__item">
+          <span class="feed__date">Mar 2024</span>
+          <span class="feed__body">
+            Our work <a href="https://robotics-transformer-x.github.io/">RT-X</a> won the
+            <span class="tag tag--award">2024 ICRA Best Paper, Best Student Paper &amp; Best Manipulation
+              Paper</span>.
           </span>
         </li>
       </ul>
@@ -471,64 +529,6 @@
       </div>
     </section>
 
-    <!-- ===================== AWARDS ===================== -->
-    <section id="awards" class="section reveal">
-      <h2 class="section__title">Honors &amp; Awards</h2>
-      <ul class="feed feed--awards">
-        <li class="feed__item">
-          <span class="feed__date">Feb 2025</span>
-          <span class="feed__body">
-            Named a <a href="https://robotics.umd.edu/futureleaders">Microsoft Future Leader in Robotics and
-              AI</a>.
-          </span>
-        </li>
-        <li class="feed__item">
-          <span class="feed__date">Jan 2025</span>
-          <span class="feed__body">
-            <strong>Forbes 30 Under 30</strong> (Asia, Technology) nomination.
-          </span>
-        </li>
-        <li class="feed__item">
-          <span class="feed__date">Jun 2024</span>
-          <span class="feed__body">
-            Named a Rising Star and won the
-            <a href="https://www.thegaiaa.org/en/awards_mrzx#mrzx">Yunfan Award at the World Artificial
-              Intelligence Conference</a> &mdash; top 15 early-career Chinese AI researchers.
-          </span>
-        </li>
-        <li class="feed__item">
-          <span class="feed__date">May 2024</span>
-          <span class="feed__body">
-            Named a <a href="https://sites.google.com/view/rsspioneers2024/">Robotics: Science and Systems
-              Pioneer</a> &mdash; top 30 early-career robotics researchers worldwide.
-          </span>
-        </li>
-        <li class="feed__item">
-          <span class="feed__date">Apr 2024</span>
-          <span class="feed__body">
-            Won the
-            <a href="https://www.qualcomm.com/research/university-relations/innovation-fellowship/2024-north-america">2024
-              Qualcomm Innovation Fellowship</a> &mdash; 32 winners in North America.
-          </span>
-        </li>
-        <li class="feed__item">
-          <span class="feed__date">Mar 2024</span>
-          <span class="feed__body">
-            Finalist for the <a href="http://scholarship.baidu.com/">Baidu AI Fellowship</a> &mdash; top 20 PhD
-            students in AI worldwide.
-          </span>
-        </li>
-        <li class="feed__item">
-          <span class="feed__date">Mar 2024</span>
-          <span class="feed__body">
-            Our work <a href="https://robotics-transformer-x.github.io/">RT-X</a> won the
-            <span class="tag tag--award">2024 ICRA Best Paper, Best Student Paper &amp; Best Manipulation
-              Paper</span>.
-          </span>
-        </li>
-      </ul>
-    </section>
-
   </main>
 
   <!-- ===================== FOOTER ===================== -->
@@ -616,7 +616,7 @@
       });
 
       /* ---- Scroll-spy: highlight active nav link ---- */
-      var sections = ['about', 'news', 'publications', 'awards']
+      var sections = ['about', 'news', 'awards', 'publications']
         .map(function (id) { return document.getElementById(id); })
         .filter(Boolean);
       var navLinks = {};
