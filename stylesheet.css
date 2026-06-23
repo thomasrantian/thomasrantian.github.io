@@ -482,13 +482,16 @@ main { display: block; }
   background: var(--bg-soft);
   aspect-ratio: 16 / 10;
 }
-.pub__media img {
+.pub__media img,
+.pub__media video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   transition: transform .5s var(--ease);
 }
-.pub:hover .pub__media img { transform: scale(1.04); }
+.pub:hover .pub__media img,
+.pub:hover .pub__media video { transform: scale(1.04); }
 
 .pub__title {
   font-family: var(--font-serif);
