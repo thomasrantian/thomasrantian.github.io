@@ -461,47 +461,33 @@ main { display: block; }
 
 /* ---------- Publications: 2-up, 7th card spans full width as a feature ---------- */
 .pubs {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-  gap: 22px;
+  display: flex;
+  flex-direction: column;
   max-width: none;
 }
 .pub {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  align-items: start;
-  padding: 22px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--surface);
-  transition: transform .22s var(--ease), box-shadow .22s var(--ease), border-color .22s var(--ease);
-}
-.pub:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--border-strong);
-}
-.pub:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 200px 1fr;
   gap: 28px;
+  align-items: start;
+  padding: 26px 0;
+  border-top: 1px solid var(--border);
 }
+.pub:first-child { border-top: 0; padding-top: 6px; }
 .pub__media {
   display: block;
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
   background: var(--bg-soft);
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 10;
 }
-.pub:last-child:nth-child(odd) .pub__media { aspect-ratio: 16 / 10; }
 .pub__media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform .5s var(--ease);
 }
-.pub__media:hover img { transform: scale(1.06); }
+.pub:hover .pub__media img { transform: scale(1.04); }
 
 .pub__title {
   font-family: var(--font-serif);
@@ -651,14 +637,8 @@ main { display: block; }
 
   .section { padding-left: 18px; padding-right: 18px; }
 
-  .pub,
-  .pub:last-child:nth-child(odd) {
-    grid-template-columns: 1fr;
-    gap: 14px;
-    padding: 18px;
-  }
-  .pub__media,
-  .pub:last-child:nth-child(odd) .pub__media { aspect-ratio: 16 / 9; max-height: 220px; }
+  .pub { grid-template-columns: 1fr; gap: 14px; padding: 20px 0; }
+  .pub__media { aspect-ratio: 16 / 9; max-height: 220px; }
 
   .feed__item { grid-template-columns: 1fr; gap: 4px; }
   .feed__date { padding-top: 0; }
