@@ -384,6 +384,9 @@ main { display: block; }
   color: var(--text-soft);
   font-size: 16.5px;
   line-height: 1.72;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 .prose p:last-child { margin-bottom: 0; }
 .prose strong { color: var(--text); }
