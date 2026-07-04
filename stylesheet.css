@@ -12,15 +12,15 @@
   --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
-  --bg: #fbfaf7;
-  --bg-soft: #f2f0e8;
-  --surface: #ffffff;
-  --surface-2: #faf9f5;
+  --bg: #faf5e9;           /* warm paper cream */
+  --bg-soft: #f2ead6;
+  --surface: #fffdf5;
+  --surface-2: #f8f2e2;
   --text: #1b2130;
   --text-soft: #465062;
-  --text-muted: #828b9d;
-  --border: #e8e3d6;
-  --border-strong: #d9d3c3;
+  --text-muted: #7f8073;
+  --border: #e8dfc6;
+  --border-strong: #d9cead;
   --accent: #284f93;
   --accent-strong: #1d3c70;
   --accent-soft: rgba(40, 79, 147, 0.09);
@@ -450,10 +450,11 @@ main { display: block; }
 /* ---------- Tags ---------- */
 .tag {
   display: inline-block;
-  padding: 1px 9px;
+  padding: 3px 12px;
   border-radius: 999px;
-  font-size: 12.5px;
+  font-size: 13px;
   font-weight: 600;
+  letter-spacing: .2px;
   line-height: 1.5;
   white-space: nowrap;
 }
@@ -461,6 +462,12 @@ main { display: block; }
   background: var(--gold-soft);
   color: var(--gold);
   border: 1px solid var(--gold-border);
+  box-shadow: 0 1px 2px rgba(140, 105, 25, .10);
+}
+.tag--award::before {
+  content: "\2726"; /* ✦ */
+  margin-right: 6px;
+  font-size: 11px;
 }
 
 /* ---------- Publication topic filter ---------- */
