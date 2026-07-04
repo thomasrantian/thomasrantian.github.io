@@ -543,6 +543,7 @@ main { display: block; }
   overflow: hidden;
   background: var(--bg-soft);
   aspect-ratio: 16 / 10;
+  transform: translateZ(0); /* own compositing layer: keeps video layers inside the rounded clip (Safari) */
 }
 .pub__media img,
 .pub__media video {
@@ -550,6 +551,7 @@ main { display: block; }
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: inherit; /* media paints its own rounded corners even if parent clipping fails */
   transition: transform .5s var(--ease);
 }
 .pub:hover .pub__media img,
@@ -726,6 +728,7 @@ main { display: block; }
   height: 100%;
   display: block;
   border: 0;
+  border-radius: inherit; /* same Safari rounded-clip safety as pub thumbnails */
   object-fit: contain;
   background: #000;
 }
