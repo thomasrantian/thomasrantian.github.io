@@ -265,17 +265,17 @@
           <button class="pubfilter__chip is-active" type="button" data-filter="all" aria-pressed="true">
             <i class="fa fa-th-large" aria-hidden="true"></i> All
           </button>
-          <button class="pubfilter__chip" type="button" data-filter="alignment" aria-pressed="false">
-            <i class="fa fa-sliders" aria-hidden="true"></i> RL &amp; Alignment
+          <button class="pubfilter__chip" type="button" data-filter="rl" aria-pressed="false">
+            <i class="fa fa-rocket" aria-hidden="true"></i> Large-scale Physical AI RL
           </button>
-          <button class="pubfilter__chip" type="button" data-filter="driving" aria-pressed="false">
-            <i class="fa fa-car" aria-hidden="true"></i> Autonomous Driving
-          </button>
-          <button class="pubfilter__chip" type="button" data-filter="robot" aria-pressed="false">
-            <i class="fa fa-android" aria-hidden="true"></i> Robot Learning
+          <button class="pubfilter__chip" type="button" data-filter="align" aria-pressed="false">
+            <i class="fa fa-shield" aria-hidden="true"></i> Embodied AI Safety &amp; Alignment
           </button>
           <button class="pubfilter__chip" type="button" data-filter="hri" aria-pressed="false">
             <i class="fa fa-users" aria-hidden="true"></i> HRI
+          </button>
+          <button class="pubfilter__chip" type="button" data-filter="data" aria-pressed="false">
+            <i class="fa fa-database" aria-hidden="true"></i> Physical AI Dataset &amp; Benchmark
           </button>
         </div>
       </div>
@@ -286,7 +286,7 @@
 
       <div class="pubs">
 
-        <article class="pub" data-cats="alignment robot">
+        <article class="pub" data-cats="rl align">
           <a class="pub__media" href="paper_vids/embodied_reward.mp4" data-video
             data-title="Good Embodied Reward Models Need Bad Behavior Data — ICML 2026 Spotlight"
             aria-label="Play video: Good Embodied Reward Models Need Bad Behavior Data">
@@ -317,7 +317,7 @@
           </div>
         </article>
 
-        <article class="pub" data-cats="robot">
+        <article class="pub" data-cats="rl">
           <a class="pub__media" href="paper_vids/texedo.mp4" data-video
             data-title="TEXEDO — language-conditioned humanoid motion generation"
             aria-label="Play video: TEXEDO humanoid motion generation demo">
@@ -346,7 +346,7 @@
           </div>
         </article>
 
-        <article class="pub" data-cats="alignment driving">
+        <article class="pub" data-cats="rl align">
           <a class="pub__media" href="https://arxiv.org/abs/2503.20105">
             <img src="paper_imgs/efficient_post_training_demo-ezgif.com-crop.gif"
               alt="Direct post-training preference alignment for motion generation" loading="lazy">
@@ -371,7 +371,7 @@
           </div>
         </article>
 
-        <article class="pub" data-cats="alignment robot">
+        <article class="pub" data-cats="rl align">
           <a class="pub__media" href="https://arxiv.org/abs/2412.04835">
             <img src="paper_imgs/tian_ijrr_2025.gif"
               alt="Maximizing alignment with minimal human feedback" loading="lazy">
@@ -394,7 +394,7 @@
           </div>
         </article>
 
-        <article class="pub" data-cats="alignment robot">
+        <article class="pub" data-cats="align">
           <a class="pub__media" href="https://arxiv.org/abs/2502.01828">
             <img src="paper_imgs/wu_2024_forewarn.gif"
               alt="From foresight to forethought: VLM-in-the-loop policy steering" loading="lazy">
@@ -417,7 +417,7 @@
           </div>
         </article>
 
-        <article class="pub" data-cats="alignment robot">
+        <article class="pub" data-cats="align">
           <a class="pub__media" href="https://arxiv.org/abs/2310.07932">
             <img src="paper_imgs/tian_rapl_23.png"
               alt="Visual representation alignment for robot learning" loading="lazy">
@@ -437,7 +437,7 @@
           </div>
         </article>
 
-        <article class="pub" data-cats="robot">
+        <article class="pub" data-cats="data">
           <a class="pub__media" href="https://robotics-transformer-x.github.io/">
             <img src="paper_imgs/RT-X-vis.gif" alt="Open X-Embodiment and RT-X models" loading="lazy">
           </a>
@@ -459,7 +459,7 @@
           </div>
         </article>
 
-        <article class="pub" data-cats="driving">
+        <article class="pub" data-cats="align">
           <a class="pub__media" href="https://arxiv.org/abs/2407.00959">
             <img src="paper_imgs/TOKEN_front_fig.png"
               alt="Tokenize the world into object-level knowledge for autonomous driving" loading="lazy">
