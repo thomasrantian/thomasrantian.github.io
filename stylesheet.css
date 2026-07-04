@@ -9,7 +9,8 @@
 
 /* ---------- Design tokens ---------- */
 :root {
-  --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;          /* display: name, titles */
+  --font-reading: "Source Serif 4", Georgia, "Times New Roman", serif;  /* long-form prose */
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
   --bg: #faf5e9;           /* warm paper cream */
@@ -382,8 +383,9 @@ main { display: block; }
 .prose p {
   margin: 0 0 16px;
   color: var(--text-soft);
-  font-size: 16.5px;
-  line-height: 1.72;
+  font-family: var(--font-reading);
+  font-size: 17px;
+  line-height: 1.75;
   text-align: justify;
   -webkit-hyphens: auto;
   hyphens: auto;
@@ -418,8 +420,9 @@ main { display: block; }
 }
 .feed__body {
   color: var(--text-soft);
-  font-size: 15.5px;
-  line-height: 1.62;
+  font-family: var(--font-reading);
+  font-size: 16px;
+  line-height: 1.66;
 }
 .feed__body strong { color: var(--text); }
 
