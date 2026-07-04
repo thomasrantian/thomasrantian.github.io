@@ -463,6 +463,58 @@ main { display: block; }
   border: 1px solid var(--gold-border);
 }
 
+/* ---------- Publication topic filter ---------- */
+.section__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px 28px;
+  margin: 0 0 20px;
+}
+.section__head .section__title { margin: 0; }
+
+.pubfilter {
+  display: none; /* inert without JS; shown when .js is set */
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.js .pubfilter { display: flex; }
+.pubfilter__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text-soft);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color .18s var(--ease), background-color .18s var(--ease), border-color .18s var(--ease), transform .18s var(--ease);
+}
+.pubfilter__chip i { color: var(--accent); font-size: 12.5px; transition: color .18s var(--ease); }
+.pubfilter__chip:hover {
+  color: var(--text);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+.pubfilter__chip.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.pubfilter__chip.is-active i { color: #fff; }
+[data-theme="dark"] .pubfilter__chip.is-active { color: #0f1118; }
+[data-theme="dark"] .pubfilter__chip.is-active i { color: #0f1118; }
+.pubfilter__chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.pub { transition: opacity .3s var(--ease); }
+.pub.is-dimmed { opacity: .45; }
+.pub.is-dimmed:hover { opacity: 1; }
+
 /* ---------- Publications: 2-up, 7th card spans full width as a feature ---------- */
 .pubs {
   display: flex;

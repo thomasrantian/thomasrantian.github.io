@@ -259,7 +259,26 @@
 
     <!-- ===================== PUBLICATIONS ===================== -->
     <section id="publications" class="section reveal">
-      <h2 class="section__title">Selected Publications</h2>
+      <div class="section__head">
+        <h2 class="section__title">Selected Publications</h2>
+        <div class="pubfilter" role="group" aria-label="Sort publications by topic">
+          <button class="pubfilter__chip is-active" type="button" data-filter="all" aria-pressed="true">
+            <i class="fa fa-th-large" aria-hidden="true"></i> All
+          </button>
+          <button class="pubfilter__chip" type="button" data-filter="alignment" aria-pressed="false">
+            <i class="fa fa-sliders" aria-hidden="true"></i> RL &amp; Alignment
+          </button>
+          <button class="pubfilter__chip" type="button" data-filter="driving" aria-pressed="false">
+            <i class="fa fa-car" aria-hidden="true"></i> Autonomous Driving
+          </button>
+          <button class="pubfilter__chip" type="button" data-filter="robot" aria-pressed="false">
+            <i class="fa fa-android" aria-hidden="true"></i> Robot Learning
+          </button>
+          <button class="pubfilter__chip" type="button" data-filter="hri" aria-pressed="false">
+            <i class="fa fa-users" aria-hidden="true"></i> HRI
+          </button>
+        </div>
+      </div>
       <p class="section__note">
         For the most up-to-date list, please see my
         <a href="https://scholar.google.com/citations?user=uY4D8-wAAAAJ&hl=en&authuser=1">Google Scholar</a>.
@@ -267,7 +286,7 @@
 
       <div class="pubs">
 
-        <article class="pub">
+        <article class="pub" data-cats="alignment robot">
           <a class="pub__media" href="paper_vids/embodied_reward.mp4" data-video
             data-title="Good Embodied Reward Models Need Bad Behavior Data — ICML 2026 Spotlight"
             aria-label="Play video: Good Embodied Reward Models Need Bad Behavior Data">
@@ -298,7 +317,7 @@
           </div>
         </article>
 
-        <article class="pub">
+        <article class="pub" data-cats="robot">
           <a class="pub__media" href="paper_vids/texedo.mp4" data-video
             data-title="TEXEDO — language-conditioned humanoid motion generation"
             aria-label="Play video: TEXEDO humanoid motion generation demo">
@@ -327,7 +346,7 @@
           </div>
         </article>
 
-        <article class="pub">
+        <article class="pub" data-cats="alignment driving">
           <a class="pub__media" href="https://arxiv.org/abs/2503.20105">
             <img src="paper_imgs/efficient_post_training_demo-ezgif.com-crop.gif"
               alt="Direct post-training preference alignment for motion generation" loading="lazy">
@@ -352,7 +371,7 @@
           </div>
         </article>
 
-        <article class="pub">
+        <article class="pub" data-cats="alignment robot">
           <a class="pub__media" href="https://arxiv.org/abs/2412.04835">
             <img src="paper_imgs/tian_ijrr_2025.gif"
               alt="Maximizing alignment with minimal human feedback" loading="lazy">
@@ -375,7 +394,7 @@
           </div>
         </article>
 
-        <article class="pub">
+        <article class="pub" data-cats="alignment robot">
           <a class="pub__media" href="https://arxiv.org/abs/2502.01828">
             <img src="paper_imgs/wu_2024_forewarn.gif"
               alt="From foresight to forethought: VLM-in-the-loop policy steering" loading="lazy">
@@ -398,7 +417,7 @@
           </div>
         </article>
 
-        <article class="pub">
+        <article class="pub" data-cats="alignment robot">
           <a class="pub__media" href="https://arxiv.org/abs/2310.07932">
             <img src="paper_imgs/tian_rapl_23.png"
               alt="Visual representation alignment for robot learning" loading="lazy">
@@ -418,7 +437,7 @@
           </div>
         </article>
 
-        <article class="pub">
+        <article class="pub" data-cats="robot">
           <a class="pub__media" href="https://robotics-transformer-x.github.io/">
             <img src="paper_imgs/RT-X-vis.gif" alt="Open X-Embodiment and RT-X models" loading="lazy">
           </a>
@@ -440,7 +459,7 @@
           </div>
         </article>
 
-        <article class="pub">
+        <article class="pub" data-cats="driving">
           <a class="pub__media" href="https://arxiv.org/abs/2407.00959">
             <img src="paper_imgs/TOKEN_front_fig.png"
               alt="Tokenize the world into object-level knowledge for autonomous driving" loading="lazy">
@@ -463,7 +482,7 @@
           </div>
         </article>
 
-        <article class="pub">
+        <article class="pub" data-cats="hri">
           <a class="pub__media" href="https://arxiv.org/pdf/2301.00901.pdf">
             <img src="paper_imgs/HRI_23.png" alt="Modeling and influencing the dynamics of human learning"
               loading="lazy">
@@ -581,6 +600,48 @@
       toTop.addEventListener('click', function () {
         window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
       });
+
+      /* ---- Publication topic filter: selected category floats to top ---- */
+      var pubFilter = document.querySelector('.pubfilter');
+      var pubsList = document.querySelector('.pubs');
+      if (pubFilter && pubsList) {
+        /* the curated order is the sort base, so "All" restores it exactly */
+        var pubOriginal = Array.prototype.slice.call(pubsList.querySelectorAll('.pub'));
+        pubFilter.addEventListener('click', function (e) {
+          var chip = e.target.closest ? e.target.closest('.pubfilter__chip') : null;
+          if (!chip) return;
+          pubFilter.querySelectorAll('.pubfilter__chip').forEach(function (c) {
+            var on = c === chip;
+            c.classList.toggle('is-active', on);
+            c.setAttribute('aria-pressed', String(on));
+          });
+          var key = chip.getAttribute('data-filter');
+          var cards = pubOriginal;
+          var beforeTops = cards.map(function (el) { return el.getBoundingClientRect().top; });
+          /* stable partition: matches keep their order, floated above the rest */
+          var hits = [], rest = [];
+          cards.forEach(function (el) {
+            var cats = (el.getAttribute('data-cats') || '').split(/\s+/);
+            var hit = key === 'all' || cats.indexOf(key) !== -1;
+            el.classList.toggle('is-dimmed', key !== 'all' && !hit);
+            (hit ? hits : rest).push(el);
+          });
+          hits.concat(rest).forEach(function (el) { pubsList.appendChild(el); });
+          /* FLIP: animate each card from its old position to the new one */
+          if (!reduceMotion) {
+            cards.forEach(function (el, i) {
+              var dy = beforeTops[i] - el.getBoundingClientRect().top;
+              if (!dy) return;
+              el.style.transition = 'none';
+              el.style.transform = 'translateY(' + dy + 'px)';
+              requestAnimationFrame(function () {
+                el.style.transition = 'transform .45s ' + 'cubic-bezier(.22,.61,.36,1)' + ', opacity .3s ease';
+                el.style.transform = '';
+              });
+            });
+          }
+        });
+      }
 
       /* ---- Video lightbox ---- */
       var lb = document.getElementById('videoLightbox');
